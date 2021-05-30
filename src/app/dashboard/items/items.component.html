@@ -1,0 +1,8 @@
+<div class="frame" *ngFor = "let item of orderItems" fxLayout>
+    <img style="width: 100px; height: 100px;" src="{{item.image}}" alt="">
+    <div class="block">
+        <p>{{item.itemName}}</p>
+        <p>{{item.price}}</p>
+        <p>{{item.description}}</p>
+    </div>
+</div>

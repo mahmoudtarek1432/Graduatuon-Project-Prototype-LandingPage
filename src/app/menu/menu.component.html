@@ -1,0 +1,28 @@
+<div class="menu">
+    <h2 class="bold">Menu</h2>
+    <mat-accordion>
+        <mat-expansion-panel *ngFor = "let cat of categories; index of i">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <p class="bold">{{cat.name|uppercase}}</p>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div fxLayout="row">
+                <div class="spliter"></div>
+                <button mat-button style="background-color: rgb(46, 253, 81); color: #fff;" (click)="addNewItem(cat)">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+            <div *ngFor="let currentItem of cat.items">
+                <app-items [Item]="currentItem"></app-items>
+            </div>
+            
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+
+<div fxLayout="row" fxLayoutAlign= "center center">
+    <mat-spinner  *ngIf="categories?.length == 0">
+
+    </mat-spinner>
+</div>

@@ -1,0 +1,31 @@
+<p></p>
+<form ngNoForm [formGroup]='TerminalSettingsForm' fxLayout="column" fxLayoutAlign="center center" (ngSubmit)="submit()">
+    <mat-form-field class="full-length">
+        <mat-label>Brand Name</mat-label>
+        <input  matInput formControlName='brandName' name='brandName' pattern='[a-zA-Z]*' type="text">
+        <mat-error style="color: red; font-size: 10px;" *ngIf='formErrors.brandName'>{{formErrors.brandName}}</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="full-length">
+        <mat-label>Primary Color</mat-label>
+        <input  matInput formControlName='primaryColor' name='primaryColor' type="text">
+        <mat-error style="color: red; font-size: 10px;" *ngIf='formErrors.primaryColor'>{{formErrors.primaryColor}}</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="full-length">
+        <mat-label>Secondary Color</mat-label>
+        <input matInput formControlName='secondaryColor' name='secondaryColor' type="text">
+        <mat-error style="color: red; font-size: 10px;" *ngIf='formErrors.secondaryColor'>{{formErrors.secondaryColor}}</mat-error>
+    </mat-form-field>
+    <p></p>
+    <mat-form-field class="full-length">
+        <mat-label>Theme</mat-label>
+        <input matInput formControlName='theme' name='theme' type="text">
+        <mat-error style="color: red; font-size: 10px;" *ngIf='formErrors.theme'>{{formErrors.theme}}</mat-error>
+    </mat-form-field>
+    <div class="bottom">
+        <button mat-raised-button >
+           submit
+        </button>
+    </div>
+</form>

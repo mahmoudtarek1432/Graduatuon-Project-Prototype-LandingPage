@@ -1,0 +1,19 @@
+.item{
+    box-shadow:0 0 11px 2px rgb(238, 238, 238);
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    border-radius: 4px;
+    .image{
+        width: 60px;
+        height: 60px;
+        background-color: #eee;
+        border-radius: 4px;
+    }
+    .block{
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    .bottom{
+        margin-top: 10px;
+    }
+}
